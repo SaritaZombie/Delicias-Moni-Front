@@ -1,0 +1,78 @@
+body{
+background:#ffffff;
+font-family:'Chewy', system-ui;
+}
+
+/* pasos */
+#tituloPasos{
+text-align:center;
+font-size:40px;
+padding:20px;
+}
+
+.pasoActivo{
+color:#a00063;
+}
+
+.pasoInactivo{
+color:#f27fc2;
+}
+
+/* contenedor */
+#contenedorGracias{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+/* circulo */
+.circuloGracias{
+width:520px;
+height:520px;
+background:linear-gradient(#ff008c,#d4006f);
+border-radius:50%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+font-size:32px;
+padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+border:6px solid #f7c0dc;
+}
+
+/* icono */
+.circuloGracias i{
+font-size:70px;
+margin-top:20px;
+}
+
+.btnVolver{
+position:absolute;
+left:25px;
+top:50%;
+transform:translateY(-50%);
+width:55px;
+height:55px;
+background:#ea67b8;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+color:#c00079;
+font-size:28px;
+border:4px solid white;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+z-index:10;
+}
+
+.btnVolver:hover{
+background:#f8c9df;
+color:#a00063;
+transform:translateY(-50%) scale(1.08);
+}

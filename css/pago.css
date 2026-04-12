@@ -1,0 +1,128 @@
+body {
+    background: #f9edf3;
+    font-family: 'Chewy', system-ui;
+}
+
+#tituloPago {
+    background: #ffecf5;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.pasoActivo {
+    color: #8a005a;
+}
+
+.pasoInactivo {
+    color: #f27fc2;
+}
+
+#pagoContainer {
+    padding: 40px;
+}
+
+.tituloSeccion {
+    color: #a00063;
+    margin-bottom: 15px;
+}
+
+.inputPago {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #a00063;
+    padding: 8px;
+    background: #ffffff;
+}
+
+.textareaPago {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 2px solid #a00063;
+    padding: 8px;
+    background: #ffffff;
+}
+
+.cardPedido {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid #a00063;
+}
+
+.filaPedido {
+    display: flex;
+    justify-content: space-between;
+    color: #a00063;
+}
+
+.totalPedido {
+    text-align: right;
+    color: #a00063;
+    font-size: 22px;
+}
+
+.medioPago label {
+    display: block;
+    color: #a00063;
+}
+
+.btnRealizar {
+    background: #ea67b8;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.btnRealizar:hover {
+    background: #f8c9df;
+    color: #a00063;
+}
+
+#tituloPago {
+    position: relative;
+}
+
+.btnVolver {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: #ea67b8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #c00079;
+    font-size: 28px;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.btnVolver:hover {
+    background: #f8c9df;
+    color: #a00063;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.mensajeErrorPago {
+    color: #ff008c;
+    background: #ffe3f3;
+    border: 2px solid #ffb3da;
+    padding: 8px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}

@@ -1,0 +1,361 @@
+body{
+    background-color: #fff1f9;
+}
+
+/*Imagen (Carousel) del producto*/
+.productoInfo{
+    padding: 30px 120px;
+    margin: auto;
+}
+
+.carousel-inner{
+    border-radius: 30px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 550px;      
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: #ff4abb;
+    border-radius: 50%;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 160, 219);
+    border-radius: 50%;
+}
+
+.carousel-indicators .active{
+    background-color: #fc2ead;
+}
+
+/*Boton volver*/
+.btnVolver {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #ff4abb;
+    color: #d4128c;
+    width: 60px;
+    margin: 10px 20px;
+    border-radius: 30px;
+    padding: 6px 18px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btnVolver:hover {
+    background-color: #d4128c;
+    color: #fff;
+}
+
+/*Informacion del producto*/
+.productoCompra{
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.productoCompra h1{
+    font-family: "Chewy", system-ui;
+    color: #d4128c;
+    font-size: 50px;
+}
+
+.productoCompra p{
+    font-weight: 500;
+    font-size: large;
+}
+
+.precio{
+    margin:20px 0;
+}
+
+.calificacion1{
+    display: flex;
+    align-items: center;
+    margin:20px 0 ;
+}
+
+.bi-star-fill{
+    color: #ffd82b;
+}
+
+.calificacion1 i{
+    font-size: 30px;
+}
+
+.calificacion1 label{
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.lbCantidad{
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: "Chewy", system-ui;
+}
+
+.btnMas, .btnMenos{
+    margin: 20px 0;
+    background-color: #d4128c;
+    border-radius: 30px;
+}
+
+.btnMas:hover, .btnMenos:hover{
+    background-color: #9c0d68;
+    border-radius: 30px;
+}
+
+.numeroCantidad{
+    margin: 20px 0;
+    width: 50px;
+    text-align: center;
+}
+
+.btnComprar{
+    background-color: #d4128c;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 30px auto;
+    width: 80%;
+    display: block;
+    font-family: "Chewy", system-ui;
+}
+
+.btnComprar:hover{
+    background-color: #9c0d68;
+    color: #fff;
+}
+
+/*Zona de reseñas y comentarios*/
+
+.comentarios{
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.valPromedio i{
+    font-size: 60px;
+}
+
+.formComentario{
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    height: 450px;
+}
+
+.formComentario input, .formComentario textarea{
+    border-radius: 30px;
+    border: 2px solid #000;
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.formComentario textarea{
+    height: 250px !important;
+}
+
+.formComentario label{
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+#publicarReseña{
+    background: #ff2d96;
+    border: none;
+    margin: 20px 0;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Chewy", system-ui;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#publicarReseña:hover{
+    background-color: #9c0d68;
+}
+
+.star-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.star-group input { display: none; }
+
+.star-group label {
+  font-size: 36px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.15s;
+  user-select: none;
+}
+
+.star-group input:checked ~ label i,
+.star-group label:hover i,
+.star-group label:hover ~ label i {
+  color: #ffd82b;
+}
+
+.star-group label i {
+  color: #ccc;
+  transition: color 0.15s;
+}
+
+.valPromedio label{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.comentarios {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.comentarios h1 {
+    font-family: "Chewy", system-ui;
+    color: #d4128c;
+}
+
+.comentarios h3{
+    font-family: "Chewy", system-ui;
+}
+
+.valPromedio i {
+    color: #ffd82b;
+    font-size: 60px;
+}
+
+.valPromedio label {
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.comentario-card {
+    background-color: #fff1f9;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.comentario-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.comentario-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #d4128c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;       
+}
+
+.comentario-estrellas i {
+    color: #ffd82b;
+    font-size: 14px;
+}
+
+.i-gris{
+    color: #aaa;
+}
+
+.comentario-fecha {
+    margin-left: auto;    
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.comentario-texto {
+    margin: 0;
+    color: #444;
+}
+
+.filtro-comentarios {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.btn-filtro {
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #444;
+    padding: 5px 18px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-filtro:hover {
+    border-color: #d4128c;
+    color: #d4128c;
+}
+
+
+@media (max-width: 768px) {
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .productoInfo {
+        padding: 20px 15px;
+    }
+
+    .comentarios .row .col {
+        text-align: center;
+    }
+
+    .filtro-comentarios {
+        justify-content: center;
+    }
+
+    .valPromedio i,
+    .valPromedio label {
+        font-size: 40px;  
+    }
+
+    .btnComprar {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .lbCantidad {
+        display: block;
+        margin-bottom: 5px;
+    }
+}

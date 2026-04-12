@@ -1,0 +1,223 @@
+body {
+    background-color: #fff1f9;
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffdaf1;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.btnEliminarCat {
+    background-color: #ff4d6d;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnEliminarCat:hover {
+    background-color: #a0002b;
+    transform: scale(1.1);
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.filtro-item output {
+    font-family: "Chewy", system-ui;
+    font-size: 20px;
+}
+
+.form-label {
+    font-family: "Chewy", system-ui;
+    font-size: large;
+}
+
+.form-range {
+    width: 300px;
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: #e91e8c !important;
+}
+
+.form-range::-moz-range-thumb {
+    background-color: #e91e8c !important;
+    border: none !important;
+}
+
+.form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #ffb3e6 !important;
+}
+
+.form-range::-webkit-slider-runnable-track {
+    background-color: #ffb3e6 !important;
+    border-radius: 10px;
+    height: 5px;
+}
+
+.form-range::-moz-range-track {
+    background-color: #ffb3e6 !important;
+    border-radius: 10px;
+    height: 5px;
+}
+
+.btnOrdenar {
+    background-color: #ffff;
+    border: solid #d6d6d6 1px;
+}
+
+.zona-productos {
+    margin: 20px auto;
+}
+
+.zona-productos h1 {
+    color: #f7029c;
+    font-family: "Chewy", system-ui;
+}
+
+
+hr {
+    background-color: #6e0046;
+    height: 5px;
+    border: none;
+}
+
+.card {
+    min-width: 200px;
+    margin: 10px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.btnComprar {
+    margin-top: 5px;
+    background-color: #9c0063;
+    width: 100%;
+    color: #ffff;
+    font-weight: 700;
+
+}
+
+.btnComprar:hover {
+    background-color: #44002b;
+}
+
+#tortas,
+#otros,
+#postres {
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+@media (max-width:680px) {
+
+    /* --- FILTROS --- */
+    .filtros {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .form-range {
+        width: 200px;
+    }
+
+    /* --- CARDS --- */
+    .card {
+        min-width: unset;
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    /* --- ZONA PRODUCTOS --- */
+    .zona-productos {
+        padding: 0 10px;
+    }
+
+    /* --- TITULO --- */
+    .zona-productos h1 {
+        font-size: 1.8rem;
+    }
+
+    .btnEditar {
+        border: none;
+    }
+
+
+
+}
+
+.btnLapiz {
+    background-color: #ffb3e6 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 38px !important;
+    height: 38px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #9c0063 !important;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btnLapiz:hover {
+    background-color: #f7029c !important;
+    color: white !important;
+    transform: scale(1.1);
+}
+
+.btnLapiz i {
+    font-size: 16px;
+}
+
+/* BOTÓN FLOTANTE */
+.btnAgregar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f7029c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btnAgregar:hover {
+    background-color: #9c0063;
+    transform: scale(1.1);
+}

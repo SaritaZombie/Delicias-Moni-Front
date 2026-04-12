@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(135deg, #fff0f6, #efd0e4);
+}
+
+#detallesPedido {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    color: #a0136d;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas */
+.card-admin {
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.card-header {
+    background-color: #f7b6d2;
+    padding: 10px;
+    font-family: 'Chewy', cursive;
+    color: #a0136d;
+    border-bottom: 1px solid #000;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.label {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Productos */
+.producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estado */
+.estado {
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.btn-actualizar {
+    background-color: #d96bb3;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Chewy', cursive;
+}
+
+.btn-actualizar:hover {
+    background-color: #c0559e;
+}
+
+/* Botón volver */
+.btn-volver {
+    background-color: #d96bb3;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-family: 'Chewy', cursive;
+}
+
+.btn-volver:hover {
+    background-color: #c0559e;
+}

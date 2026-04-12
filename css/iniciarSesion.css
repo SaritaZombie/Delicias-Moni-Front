@@ -1,0 +1,59 @@
+body {
+    background-color: #fff1f9 !important; 
+}
+
+#iniciarP{
+    color: #d90089;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;              
+}
+
+.formulario {
+    background-color: white;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 5px solid #a20066;
+}
+
+.form-control:focus{
+    border-color: #f7029c;
+    box-shadow: none;
+}
+
+.btn{
+    color: white;
+    background-color: #f7029c;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: #ffdff1;
+    color: #f7029c;
+    border-color: white;
+}
+
+#segundo{
+    color: #999999;
+    background-color: #ffdaf1;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}   
+    
+
+#segundo:hover{
+    background-color: #ffdff1;
+    color: #f7029c;
+    border-color: white;
+}

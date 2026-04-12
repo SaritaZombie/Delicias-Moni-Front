@@ -1,0 +1,129 @@
+#tituloCarrito {
+    background: #f8d9e6;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Chewy', system-ui;
+    font-size: 40px;
+    color: #d41486;
+}
+
+#carritoContainer {
+    background: #efd3df;
+    padding: 40px;
+}
+
+/* 👉 ENCABEZADO TABLA con misma letra */
+.encabezadoTabla {
+    font-family: "Chewy", system-ui;
+    color: #b30771;
+    font-size: 28px;
+}
+
+/* 👉 texto de cada producto */
+.producto {
+    margin-bottom: 25px;
+    align-items: center;
+    font-family: "Chewy", system-ui;
+    color: #570333;
+    font-size: 22px;
+}
+
+.imgCarrito {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.eliminar {
+    font-size: 22px;
+    color: #a4005c;
+    cursor: pointer;
+}
+
+.contador {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 👉 TOTAL */
+#totalContainer {
+    background: #f3e6ec;
+    padding: 20px;
+    text-align: right;
+    font-family: "Chewy", system-ui;
+    color: #b30771;
+}
+
+#totalContainer h3 {
+    font-size: 26px;
+}
+
+#totalContainer .btn {
+    background: #ea67b8;
+    color: #ffffff;
+    border: 4px solid white;
+    border-radius: 40px;
+    font-family: "Chewy", system-ui;
+    font-size: 20px;
+    padding: 6px 22px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+#totalContainer .btn:hover {
+    background: #f8c9df;
+    color: #a00063;
+    transform: scale(1.05);
+}
+
+.activoCarrito {
+    color: #7a2555 !important;
+    font-weight: bold;
+}
+
+#tituloCarrito {
+    background: #f8d9e6;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Chewy', system-ui;
+    font-size: 40px;
+    color: #d41486;
+    position: relative;
+}
+
+
+.btnVolver {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: #ea67b8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #c00079;
+    font-size: 28px;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.btnVolver:hover {
+    background: #f8c9df;
+    color: #a00063;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.pasoActivo {
+    color: #8a005a;
+}
+
+.pasoInactivo {
+    color: #f27fc2;
+}

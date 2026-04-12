@@ -1,0 +1,193 @@
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/*Encabezado*/
+#encabezado {
+    background-color: #ff4abb;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    max-width: 70%;
+    height: auto;
+    border: 5px solid #ffdff1;
+    border-radius: 80%;
+}
+
+#imagenLogo a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'Railey';
+    src: url('../fonts/Railey-PersonalUse.ttf') format('truetype');
+}
+
+#DeliciasMoli {
+    font-family: 'Railey';
+    color: white;
+    align-items: center;
+    font-size: xxx-large;
+    margin-top: 10px;
+}
+
+#iconos {
+    display: flex;
+    gap: 20px;
+    color: white;
+    justify-content: right;
+    padding-right: 30px;
+}
+
+#iconos i{
+    font-size: 45px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#cliente{
+    background-color: #ffffff;
+    font-family: "Chewy", system-ui;
+}
+
+#clienteOpcion{
+    color: #d4128c;
+}
+
+#clienteOpcion:hover{
+    background-color: white;
+    color: #ff4abb;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*Nav*/
+#nav {
+    background-color: #d4128c;
+} 
+
+#nav .nav-link{
+    color: white;
+    font-family: "Chewy", system-ui;
+    font-size: x-large;
+}
+
+#nav .nav-link:hover{
+    color: white;
+    background-color: #ff4abb;
+}
+
+.dropdown-menu{
+    background-color: #ff4abb;
+    font-family: "Chewy", system-ui;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.dropdown-item:hover{
+    background-color: white;
+    color: #ff4abb;
+}
+
+#nav ul{
+    gap: 40px;
+}
+
+#productos {
+    display: flex;
+}
+
+#flecha {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+/*pie de página*/
+#redesSociales{
+    background-color: #ff4abb;
+}
+
+#redesSociales p, i{
+    color: white;
+    padding: 0;
+    margin: 5px;
+}
+
+#grupo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pie p{
+    color: #d4128c;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+/*Lupa*/
+.contenedor-busqueda {
+    position: relative;
+}
+
+#buscador {
+    transform: translateY(-10px);
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 500px;
+}
+
+.resultados {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 500px;
+    background: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    color: #f70ba0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: #ddd;
+}
+
+.item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.oculto {
+    display: none;
+}

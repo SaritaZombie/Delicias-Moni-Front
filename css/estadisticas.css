@@ -1,0 +1,101 @@
+body{
+    background-color: #fcebf5;
+}
+
+.container{
+    margin: 30px auto;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.container h1{
+    font-family: "Chewy", system-ui;
+    color: #d4128c;
+    margin:10px 0;
+}
+
+.container h2{
+    font-family: "Chewy", system-ui;
+    color: #9b0464;
+    margin:15px 0;
+}
+
+.stats1 p{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.mesBotones{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.mesBotones button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #d4128c;
+}
+
+
+.mesBotones button:hover{
+    background-color: #9b0464;
+}
+
+/* Graficas */
+.graficaVenta{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: 280px;
+    width: 100%;
+}
+
+.graficaProd{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: 280px;
+    width: 100%;
+}
+
+
+/*Top 3 productos vendidos*/
+
+.card{
+    max-width: 300px;
+    margin: auto;
+}
+
+.card h5{
+    font-family: "Chewy", system-ui;
+}
+
+.card p{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.card img{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

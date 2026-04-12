@@ -1,0 +1,55 @@
+.btn-cambiar-direccion{
+    background-color: #f7029c;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.btn-cambiar-direccion:hover{
+    background-color: white;
+    color: #f7029c;
+    border-color: #f7029c;
+}
+
+#centro {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#contactoP {
+    margin: 0;
+}
+
+#contenedorInput {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#inputMapa, #inputMapa2 {
+    width: 600px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ff35b5;
+    outline: none;
+}
+
+#guardarMapa, #guardarMapa2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-top: 0;
+    border-radius: 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+#contenedorMapas{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

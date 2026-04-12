@@ -1,0 +1,89 @@
+body {
+    background-color: #fff1f9 !important; 
+}
+
+#datosP{
+    color: #d90089;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;              
+}
+
+.formulario {
+    background-color: white;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    border: 5px solid #a20066;
+}
+
+.form-control:focus{
+    border-color: #f7029c;
+    box-shadow: none;
+}
+
+.formulario i {
+    color: #f7029c;
+    font-size: 120px;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+}
+
+.btn{
+    color: white;
+    background-color: #f7029c;
+    border: 5px solid white;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.btn:hover{
+    background-color: #ffdff1;
+    color: #f7029c;
+    border-color: white;
+}
+
+.input {
+    display: flex;
+    gap: 10px;
+}
+
+.input i {
+    font-size: x-large;
+}
+
+#fotoUsuario {
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 5px solid #f7029c;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: rgb(255, 255, 255);
+    color: hotpink;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: deeppink;
+    color: white;
+}

@@ -1,0 +1,80 @@
+body {
+    background-color: #fff1f9 !important; 
+}
+
+#contactoP{
+    color: #f7029c;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;              
+}
+
+#mapa1 {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa {
+    width: 800px;
+    height: 500px;
+}
+
+#contactoContainer {
+    background-color: #ffceec;
+    width: 100%;
+}
+
+#imagenContacto {
+    height: 300px; 
+}
+
+.formulario {
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    border: 5px solid #f7029c;
+}
+
+#columna1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#columna2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.btn{
+    color: white;
+    background-color: #f7029c;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: #ffdff1;
+    color: #f7029c;
+    border-color: white;
+}
+
+.form-control:focus{
+    border-color: #f7029c;
+    box-shadow: none;
+}
+
+#mensajeExito {
+    display:none; 
+    color:green;
+    text-align: center;
+}

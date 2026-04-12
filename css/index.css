@@ -1,0 +1,165 @@
+/*Carrusel*/
+.carousel-item img {
+    height: 500px;
+}
+
+.carousel {
+    position: relative;
+}
+
+.btn-carrusel {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: #ff4abb;
+    border-radius: 50%;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 0.01%; 
+}
+
+/*Promociones del Mes*/
+#promocionesContainer {
+    background-color:#ffdff1 ;
+    width: 100%;
+    text-align: center;
+}
+
+#promocionesP{
+    color: #ff4abb;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    display: flex;              
+    align-items: center; 
+}
+
+#promocionesP::before,
+#promocionesP::after{
+    content:"";
+    flex:1;
+    border-bottom:8px solid #ff4abb;
+}
+
+#promociones{
+    gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+}
+
+#promocionProducto{
+    background-color: white;
+    border: 5px solid #ff3fb7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#promocionProducto img{
+    height: 300px;
+    margin: 20px;
+}
+
+#promocionProducto .btn, .btn-carrusel, .btn-carrusel2{
+    background-color: #f7029c;
+    border: 5px solid white;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#promocionProducto .btn:hover, .btn-carrusel:hover,.btn-carrusel2:hover{
+    background-color: white;
+    color: #f7029c;
+    border-color: #f7029c;
+}
+
+
+#promocionProducto .btn:focus, .btn-carrusel:focus,
+#promocionProducto .btn:active, .btn-carrusel:active {
+    background-color: #d63384 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+#promocionProducto .btn, .btn-carrusel {
+    transition: none !important;
+}
+
+#promocionProducto .btn:focus-visible, .btn-carrusel:focus-visible {
+    box-shadow: none !important;
+}
+
+/*Productos Destacados*/
+#destacadosContainer {
+    background-color:#ffceec ;
+    width: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: center;
+}
+
+#destacadosP{
+    color: #ff4abb;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+#destacados {
+    gap: 80px;
+    padding-bottom: 90px;
+}
+
+#destacadoProducto img {
+    border-radius: 80%;
+    border: 5px solid white;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.info {
+    background-color: #ff4abb;
+    border-radius: 20px;
+    border: 5px solid white;
+    padding: 20px;
+}
+
+.info p{
+    font-family: "Chewy", system-ui;
+    color: white;
+    font-size: xx-large;
+}
+
+.info .btn{
+    color: #f7029c;
+    background-color: #ffffff;
+    border: 5px solid white;
+}
+
+.info .btn:hover{
+    background-color: #f7029c;
+    color: white;
+    border-color: white;
+}

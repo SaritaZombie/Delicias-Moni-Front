@@ -1,0 +1,97 @@
+body {
+    background-color: #f9d3e9;
+    font-family: 'Chewy', cursive;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b5e63;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    background: #f1f1f1;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* IMAGEN */
+.imagen-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.preview {
+    width: 100px;
+    height: 100px;
+    background: #f1f1f1;
+    border-radius: 15px;
+}
+
+.botones-img {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.gris {
+    background: #555;
+}
+
+.rosado {
+    background: #f7a3c7;
+}
+
+.rojo {
+    background: #c4006b;
+}
+
+/* BOTON FINAL */
+.btn-agregar {
+    margin-top: 20px;
+    background: #d86aa6;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    margin-top: 10px;
+    background: #ff4d4d;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+body {
+    background-color: #fff1f9 !important; 
+}
+
+#titulo p{
+    color: #f7029c;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 30px;
+    padding-left: 65px;
+    display: flex;
+    justify-content: left; 
+    margin-bottom: 1px;             
+}
+
+#titulo2 p{
+    color: #f7029c;
+    font-family: "Chewy", system-ui;
+    font-size: xxx-large;
+    padding-top: 30px;
+    padding-right: 65px;
+    display: flex;
+    justify-content: right; 
+    margin-bottom: 1px;             
+}
+
+.col-10 p {
+    background-color: white;
+    border: 4px solid #f7029c;
+    border-radius: 20px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.col-10 p {
+    background-color: white;
+    border: 4px solid #f7029c;
+    border-radius: 20px;
+    margin-right: 50px;
+    padding: 10px;
+}
+
+.col-2 img {
+    max-width: 45%;
+    height: auto;
+}
+
+#texto {
+    align-items: center;
+}
