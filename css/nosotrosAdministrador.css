@@ -68,3 +68,9 @@ body {
     justify-content: flex-end;
     padding-right: 50px; 
 }
+
+.form-control:focus {
+    border-color: #ff69b4; 
+    box-shadow: 0 0 5px #ff69b4;
+    outline: none;
+}
