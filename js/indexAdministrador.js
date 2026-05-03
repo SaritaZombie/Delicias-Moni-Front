@@ -19,23 +19,31 @@ document.querySelectorAll('.btn-cambiar-nombre').forEach(boton => {
 // Cambiar imagen
 document.querySelectorAll('.btn-cambiar-img').forEach(boton => {
     boton.addEventListener('click', () => {
-        const producto = boton.closest('.producto');
-        const img = producto.querySelector('img');
+        const producto = boton.closest('form');
         const inputFile = producto.querySelector('.input-img');
 
-        // Abrir el explorador de archivos
         inputFile.click();
+    });
+});
 
-        // Cuando seleccionen un archivo
-        inputFile.onchange = () => {
-            const file = inputFile.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    img.src = e.target.result; // Cambia la imagen en la página
-                };
-                reader.readAsDataURL(file);
-            }
+document.querySelectorAll('.input-img').forEach(inputFile => {
+    inputFile.addEventListener('change', function () {
+
+        if (this.files.length === 0) return;
+
+        const form = this.closest('form');
+        const img = form.parentElement.querySelector('img');
+
+        const file = this.files[0];
+
+        // preview
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            img.src = e.target.result;
         };
+        reader.readAsDataURL(file);
+
+        // 🔥 ENVÍA EL FORM
+        form.submit();
     });
 });
