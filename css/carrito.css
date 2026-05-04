@@ -6,7 +6,39 @@
     font-size: 40px;
     color: #d41486;
 }
+.contadorBonito {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
+.btnCantidad {
+    width: 35px;
+    height: 35px;
+    background: #ea67b8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border: 3px solid white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.btnCantidad:hover {
+    background: #f8c9df;
+    color: #a00063;
+    transform: scale(1.1);
+}
+
+.numeroCantidad {
+    font-size: 22px;
+    font-family: "Chewy", system-ui;
+    color: #570333;
+}
 #carritoContainer {
     background: #efd3df;
     padding: 40px;
