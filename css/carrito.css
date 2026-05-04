@@ -12,14 +12,12 @@
     padding: 40px;
 }
 
-/* 👉 ENCABEZADO TABLA con misma letra */
 .encabezadoTabla {
     font-family: "Chewy", system-ui;
     color: #b30771;
     font-size: 28px;
 }
 
-/* 👉 texto de cada producto */
 .producto {
     margin-bottom: 25px;
     align-items: center;
@@ -47,7 +45,6 @@
     align-items: center;
 }
 
-/* 👉 TOTAL */
 #totalContainer {
     background: #f3e6ec;
     padding: 20px;
