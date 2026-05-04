@@ -123,7 +123,23 @@
 .pasoActivo {
     color: #8a005a;
 }
+.contador .btn {
+    background: #ea67b8;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.contador .btn:hover {
+    background: #f8c9df;
+    color: #a00063;
+}
 .pasoInactivo {
     color: #f27fc2;
 }
