@@ -1,0 +1,101 @@
+body{
+    background-color: #fff1f9;
+}
+
+.titulo{
+    text-align: center;
+    margin: 30px 0;
+    font-family: "Chewy", system-ui;
+    color: #9c0063;
+}
+
+.tabla-pedidos{
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.fila{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.encabezado{
+    background-color: #f7cde2;
+    font-weight: bold;
+}
+
+.estado-col{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* estados dinámicos */
+.estado{
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.pendiente{ background-color: #ff6b6b; }
+.entregado{ background-color: #6bcf63; }
+.proceso{ background-color: #f5b041; }
+
+/* botón */
+.btn-ver{
+    background-color: #e6b3d1;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-ver:hover{
+    background-color: #d98cb3;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
+.tabla-pedidos{
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    border: 2px solid black;
+    overflow: hidden;
+    min-height: 350px; 
+}
+
+.fila{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.estado-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fila div{
+    text-align: center;
+}
