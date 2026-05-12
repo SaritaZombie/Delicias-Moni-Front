@@ -2,6 +2,10 @@ body {
     background: #f9edf3;
 }
 
+.main-content {
+    font-family: "Chewy", system-ui;
+}
+
 #tituloPago {
     background: #ffecf5;
     text-align: center;
