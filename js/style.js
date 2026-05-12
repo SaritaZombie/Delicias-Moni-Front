@@ -2,9 +2,6 @@ const btn = document.getElementById("btnBuscar");
 const buscador = document.getElementById("buscador");
 const resultados = document.getElementById("resultados");
 
-//Productos
-
-const linkProductos = `index.php?action=verProducto&id=${p.id_producto}`;
 
 
 //Mostrar input al hacer click
@@ -13,6 +10,8 @@ btn.addEventListener("click", (e) => {
     buscador.classList.toggle("oculto");
     buscador.focus();
 });
+
+let timeoutBusqueda = null;
 
 // Filtrar con debounce
 buscador.addEventListener("input", () => {
@@ -44,7 +43,8 @@ async function buscarProductos(texto) {
 
         productos.forEach(p => {
             const img  = p.url;
-            const link = linksProductos[p.id_producto] ?? "#";
+            //Productos
+            const link= `index.php?action=verProducto&id=${p.id_producto}`;
             const precio = Number(p.precio).toLocaleString("es-CO");
 
             const div = document.createElement("div");
