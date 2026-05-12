@@ -50,7 +50,7 @@ async function buscarProductos(texto) {
             let link;
             if (rol === "admin") {
                 link = `/Delicias-Moni/index.php?action=editarProducto&id=${p.id_producto}`;
-            } else if (rol === "usuario") {
+            } else if (rol === "cliente") {
                 link = `/Delicias-Moni/index.php?action=verProductoUsuario&id=${p.id_producto}`;
             } else {
                 link = `/Delicias-Moni/index.php?action=verProducto&id=${p.id_producto}`;
