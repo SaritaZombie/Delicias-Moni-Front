@@ -42,7 +42,7 @@ async function buscarProductos(texto) {
         }
 
         productos.forEach(p => {
-            const img  = p.url;
+            const img  = `/Delicias-Moni/${p.url}`;
             //Productos
             const link= `/Delicias-Moni/index.php?action=verProducto&id=${p.id_producto}`;
             const precio = Number(p.precio).toLocaleString("es-CO");
