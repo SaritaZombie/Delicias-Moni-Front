@@ -1,6 +1,9 @@
-body{
-background:#ffffff;
-font-family:'Chewy', system-ui;
+body {
+    background: #f9edf3;
+}
+
+.main-content {
+    font-family: "Chewy", system-ui;
 }
 
 /* pasos */
