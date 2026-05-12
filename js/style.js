@@ -30,7 +30,7 @@ buscador.addEventListener("input", () => {
 
 async function buscarProductos(texto) {
     try {
-        const res = await fetch(`index.php?action=buscarProductos&q=${encodeURIComponent(texto)}`);
+        const res = await fetch(`/Delicias-Moni/index.php?action=buscarProductos&q=${encodeURIComponent(texto)}`);
         const productos = await res.json();
 
         resultados.innerHTML = "";
@@ -44,7 +44,7 @@ async function buscarProductos(texto) {
         productos.forEach(p => {
             const img  = p.url;
             //Productos
-            const link= `index.php?action=verProducto&id=${p.id_producto}`;
+            const link= `/Delicias-Moni/index.php?action=verProducto&id=${p.id_producto}`;
             const precio = Number(p.precio).toLocaleString("es-CO");
 
             const div = document.createElement("div");
