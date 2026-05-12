@@ -49,9 +49,6 @@ body {
     font-size: 45px;
 }
 
-.dropdown-toggle::after {
-    display: none;
-}
 
 #cliente{
     background-color: #ffffff;
