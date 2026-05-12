@@ -1,99 +1,68 @@
-let carrito = JSON.parse(localStorage.getItem("carrito")) || []
-let contenedor = document.getElementById("listaCarrito")
+document.addEventListener("DOMContentLoaded", () => {
 
-function dinero(n) {
-    return "$" + n.toLocaleString("es-CO")
-}
+    const btn = document.getElementById("btnAgregarCarrito");
 
-function cargar() {
+    let idEliminar = null;
 
-    contenedor.innerHTML = ""
-    let total = 0
+    const modal = document.getElementById("modalEliminar");
+    const btnConfirmar = document.getElementById("confirmarEliminar");
+    const btnCancelar = document.getElementById("cancelarEliminar");
 
-    if (carrito.length == 0) {
+    //  abrir modal
+    document.querySelectorAll(".eliminarBtn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            idEliminar = btn.dataset.id;
+            modal.style.display = "flex";
+        });
+    });
 
-        contenedor.innerHTML = `
-<div class="text-center mt-5">
-<i class="bi bi-cart-x" style="font-size:60px;color:#ff008c"></i>
-<h4 class="mt-3">Tu carrito está vacío</h4>
-<p>Agrega productos para continuar comprando</p>
-</div>
-`
+    //  cancelar
+    btnCancelar.addEventListener("click", () => {
+        modal.style.display = "none";
+        idEliminar = null;
+    });
 
-        document.getElementById("total").textContent = "$0"
+    //  confirmar eliminar
+    btnConfirmar.addEventListener("click", () => {
 
-        let btn = document.getElementById("btnPagar")
-        if (btn) btn.classList.add("disabled")
+        fetch(`/Delicias-Moni/index.php?action=eliminarCarrito&id=${idEliminar}`)
+            .then(() => {
+                //  quitar visualmente sin recargar
+                location.reload(); // si quieres luego lo quitamos
+            });
 
-        actualizarContador()
-        return
+    });
+
+    if (btn) {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const id = this.dataset.id;
+            const precio = this.dataset.precio;
+            let cantidad = document.getElementById("inputNumero").value;
+
+            if (!cantidad || cantidad <= 0) {
+                cantidad = 1;
+            }
+
+            window.location.href = `/Delicias-Moni/index.php?action=agregarCarrito&id=${id}&precio=${precio}&cantidad=${cantidad}`;
+
+
+        });
     }
 
-    carrito.forEach((p, i) => {
+    let cantidad = document.getElementById("inputNumero").value;
+    document.getElementById("cantidadInput").value = cantidad;
+    function sumarCantidad() {
+        let input = document.getElementById("cantidadInput");
+        input.value = parseInt(input.value) + 1;
+    }
 
-        let sub = p.precio * p.cantidad
-        total += sub
-
-        contenedor.innerHTML += `
-<div class="row producto">
-
-<div class="col-5 d-flex align-items-center gap-3">
-<i class="bi bi-x-lg eliminar" data-i="${i}"></i>
-<img src="${p.img}" class="imgCarrito">
-<p>${p.nombre}</p>
-</div>
-
-<div class="col-2">${dinero(p.precio)}</div>
-
-<div class="col-3 contador">
-<button class="menos btn btn-light" data-i="${i}">-</button>
-<span>${p.cantidad}</span>
-<button class="mas btn btn-light" data-i="${i}">+</button>
-</div>
-
-<div class="col-2">${dinero(sub)}</div>
-
-</div>
-`
-    })
-
-    document.getElementById("total").textContent = dinero(total)
-
-    actualizarContador()
-    eventos()
-}
-
-function eventos() {
-
-    document.querySelectorAll(".mas").forEach(b => {
-        b.onclick = () => {
-            carrito[b.dataset.i].cantidad++
-            guardar()
+    function restarCantidad() {
+        let input = document.getElementById("cantidadInput");
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
         }
-    })
+    }
 
-    document.querySelectorAll(".menos").forEach(b => {
-        b.onclick = () => {
-            let p = carrito[b.dataset.i]
-            if (p.cantidad > 1) {
-                p.cantidad--
-                guardar()
-            }
-        }
-    })
-
-    document.querySelectorAll(".eliminar").forEach(b => {
-        b.onclick = () => {
-            carrito.splice(b.dataset.i, 1)
-            guardar()
-        }
-    })
-
-}
-
-function guardar() {
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    cargar()
-}
-
-cargar()
+});

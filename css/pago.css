@@ -1,6 +1,9 @@
 body {
     background: #f9edf3;
-    font-family: 'Chewy', system-ui;
+}
+
+.main-content {
+    font-family: "Chewy", system-ui;
 }
 
 #tituloPago {
