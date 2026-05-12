@@ -31,7 +31,10 @@ buscador.addEventListener("input", () => {
 async function buscarProductos(texto) {
     try {
         const res = await fetch(`/Delicias-Moni/index.php?action=buscarProductos&q=${encodeURIComponent(texto)}`);
-        const productos = await res.json();
+        const data = await res.json();
+
+        const rol = data.rol;
+        const productos = data.productos;
 
         resultados.innerHTML = "";
 
