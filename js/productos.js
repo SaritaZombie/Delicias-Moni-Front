@@ -12,11 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //Revisar cada producto
         productos.forEach((producto) => {
-            const precio = parseInt(producto.dataset.precio);
-            const contenedor = producto.closest("article");
-
+            const precio = parseInt(producto.dataset.precio);   
             //Verificar si el precio es menor que el valor mostrado
-            contenedor.style.display = (precio <= valor) ? "" : "none";
+            producto.style.display = (precio <= valor) ? "" : "none";
         });
     });
 });
