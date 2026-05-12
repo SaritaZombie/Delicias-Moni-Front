@@ -2,59 +2,10 @@ const btn = document.getElementById("btnBuscar");
 const buscador = document.getElementById("buscador");
 const resultados = document.getElementById("resultados");
 
-//Productos (simulación de base de datos)
-const productos = [
-    {
-        nombre: "Palillos de Donas",
-        img: "img/dona3.jpg",
-        link: "#"
-    },
-    {
-        nombre: "Deditos de Queso",
-        img: "img/deditos.png",
-        link: "#"
-    },
-    {
-        nombre: "Manzanas Caramelizadas",
-        img: "img/image.jpg",
-        link: "#"
-    },
-    {
-        nombre: "Gelatinas",
-        img: "img/image (1).png",
-        link: "#"
-    }
-    ,
-    {
-        nombre: "Postres 3 Leches",
-        img: "img/postrefresas.jpg",
-        link: "postre-3-leches.html"
-    }
-    ,
-    {
-        nombre: "Postre Napoleón",
-        img: "img/napoleon4.jpg",
-        link: "#"
-    }
-    ,
-    {
-        nombre: "Fresas con Crema",
-        img: "img/fresas.jpg",
-        link: "#"
-    }
-    ,
-    {
-        nombre: "Pudin de Frambuesa",
-        img: "img/postre_fresa.jpeg",
-        link: "#"
-    }
-    ,
-    {
-        nombre: "Pudin Personalizado",
-        img: "img/torta3.jpeg",
-        link: "#"
-    }
-];
+//Productos
+
+const linkProductos = `index.php?action=verProducto&id=${p.id_producto}`;
+
 
 //Mostrar input al hacer click
 btn.addEventListener("click", (e) => {
@@ -63,40 +14,64 @@ btn.addEventListener("click", (e) => {
     buscador.focus();
 });
 
-//Filtrar mientras escribes
+// Filtrar con debounce
 buscador.addEventListener("input", () => {
-    const texto = buscador.value.toLowerCase();
+    const texto = buscador.value.trim();
 
-    resultados.innerHTML = "";
+    clearTimeout(timeoutBusqueda);
 
     if (texto === "") {
+        resultados.innerHTML = "";
         resultados.classList.add("oculto");
         return;
     }
 
-    const filtrados = productos.filter(p =>
-        p.nombre.toLowerCase().includes(texto)
-    );
+    timeoutBusqueda = setTimeout(() => buscarProductos(texto), 300);
+});
 
-    filtrados.forEach(p => {
-        const div = document.createElement("div");
-        div.classList.add("item");
+async function buscarProductos(texto) {
+    try {
+        const res = await fetch(`index.php?action=buscarProductos&q=${encodeURIComponent(texto)}`);
+        const productos = await res.json();
 
-        div.innerHTML = `
-            <img src="${p.img}">
-            <span>${p.nombre}</span>
-        `;
+        resultados.innerHTML = "";
 
-        //Redirigir al hacer click
-        div.addEventListener("click", () => {
-            window.location.href = p.link;
+        if (productos.length === 0) {
+            resultados.innerHTML = `<div class="item sin-resultados">Sin resultados para "${texto}"</div>`;
+            resultados.classList.remove("oculto");
+            return;
+        }
+
+        productos.forEach(p => {
+            const img  = p.url;
+            const link = linksProductos[p.id_producto] ?? "#";
+            const precio = Number(p.precio).toLocaleString("es-CO");
+
+            const div = document.createElement("div");
+            div.classList.add("item");
+            div.innerHTML = `
+                <img src="${img}" alt="${p.nombre}">
+                <div class="item-info">
+                    <span class="item-nombre">${p.nombre}</span>
+                </div>
+            `;
+
+            div.addEventListener("click", () => {
+                window.location.href = link;
+            });
+
+            resultados.appendChild(div);
         });
 
-        resultados.appendChild(div);
-    });
+        resultados.classList.remove("oculto");
 
-    resultados.classList.remove("oculto");
-});
+    } catch (err) {
+        console.error("Error al buscar:", err);
+        resultados.innerHTML = `<div class="item sin-resultados">Error al buscar productos</div>`;
+        resultados.classList.remove("oculto");
+    }
+}
+
 
 //Cerrar si haces click afuera
 document.addEventListener("click", (e) => {
