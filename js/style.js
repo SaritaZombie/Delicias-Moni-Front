@@ -44,7 +44,14 @@ async function buscarProductos(texto) {
         productos.forEach(p => {
             const img  = `/Delicias-Moni/${p.url}`;
             //Productos
-            const link= `/Delicias-Moni/index.php?action=verProducto&id=${p.id_producto}`;
+            let link;
+            if (rol === "admin") {
+                link = `/Delicias-Moni/index.php?action=editarProducto&id=${p.id_producto}`;
+            } else if (rol === "usuario") {
+                link = `/Delicias-Moni/index.php?action=verProductoUsuario&id=${p.id_producto}`;
+            } else {
+                link = `/Delicias-Moni/index.php?action=verProducto&id=${p.id_producto}`;
+            }
             const precio = Number(p.precio).toLocaleString("es-CO");
 
             const div = document.createElement("div");
