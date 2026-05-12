@@ -129,3 +129,64 @@ body {
     margin-top: 10px;
     display: none;
 }
+
+
+/* Fondo oscuro suave */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Caja del modal */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: aparecer 0.4s ease;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Título */
+.modal-title {
+    font-weight: bold;
+    color: #d63384;
+    font-size: 1.5rem;
+}
+
+/* Texto */
+.modal-body p {
+    font-size: 18px;
+    color: #6c2a4f;
+}
+
+/* Botón */
+.modal-footer .btn {
+    background: #d63384;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.modal-footer .btn:hover {
+    background: #b0256b;
+    transform: scale(1.05);
+}
+
+/* Quitar bordes feos */
+.modal-header,
+.modal-footer {
+    border: none;
+}
