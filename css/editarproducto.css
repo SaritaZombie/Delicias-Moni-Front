@@ -1,7 +1,10 @@
 body {
     background-color: #f9d3e9;
-    font-family: 'Chewy', cursive;
     margin: 0;
+}
+
+.main-content {
+    font-family: "Chewy", system-ui;
 }
 
 .contenedor {
