@@ -18,7 +18,7 @@ body{
 
 .fila{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     padding: 15px 20px;
     align-items: center;
 }
