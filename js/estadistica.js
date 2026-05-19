@@ -52,14 +52,13 @@ function cargarGrafica(mes, anio) {
     })
 
     //Convertir respuesta a JSON
-    .then(res => res.text())
-.then(data => {
-    console.log(data);
-})
+    .then(res => res.json())
 
 
     //Trabajar los datos recibidos
     .then(datos => {
+        console.log(datos);
+
 
         // Obtener solo los 2 productos más vendidos
         const labels = datos
