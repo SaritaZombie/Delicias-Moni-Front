@@ -52,7 +52,11 @@ function cargarGrafica(mes, anio) {
     })
 
     //Convertir respuesta a JSON
-    .then(res => res.json())
+    .then(res => res.text())
+.then(data => {
+    console.log(data);
+})
+
 
     //Trabajar los datos recibidos
     .then(datos => {
