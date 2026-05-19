@@ -32,7 +32,7 @@ async function buscarProductos(texto) {
     try {
         const res = await fetch(`/Delicias-Moni/index.php?action=buscarProductos&q=${encodeURIComponent(texto)}`);
         const data = await res.json();
-        console.log(data);
+
         const rol = data.rol;
         const productos = data.productos;
 
